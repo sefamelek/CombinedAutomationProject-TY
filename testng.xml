@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Automation - Sefa Melek" parallel="classes" thread-count="5">
+        <listeners>
+            <listener class-name="com.trendyol.api.Listeners.TestListener"/>
+        </listeners>
+    <test name="API Test Suite">
+        <classes>
+            <class name="com.trendyol.api.MathOperationAddition"/>
+            <class name="com.trendyol.api.MathOperationSubstraction"/>
+            <class name="com.trendyol.api.MathOperationMultiplication"/>
+            <class name="com.trendyol.api.MathOperationDivision"/>
+            <class name="com.trendyol.api.SumTests"/>
+        </classes>
+    </test>
+</suite>
