@@ -3,7 +3,7 @@ package com.trendyol.api;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static com.trendyol.api.constants.Contstants.*;
+import static com.trendyol.api.Constants.Contstants.*;
 
 public class MathOperationSubstraction extends TestBase {
 

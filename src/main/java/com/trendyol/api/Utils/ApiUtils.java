@@ -5,7 +5,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import java.util.Arrays;
 
-import static com.trendyol.api.constants.Contstants.*;
+import static com.trendyol.api.Constants.Contstants.*;
 import static io.restassured.RestAssured.given;
 
 public class ApiUtils{

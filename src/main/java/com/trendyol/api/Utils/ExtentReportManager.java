@@ -43,8 +43,20 @@ public class ExtentReportManager {
         getExtent().set(extent);
     }
 
-    public static ExtentReports getInstance() {
+   /* public static ExtentReports getInstance() {
         return getExtent().get();
+    }
+
+
+    */
+
+    public static ExtentReports getInstance() {
+        if (extentReports == null) {
+            extentReports = new ExtentReports();
+            // extent nesnesinin gerekli ayarlarını yapın
+            // ...
+        }
+        return extentReports;
     }
 
     public static ExtentReports createInstance(String reportFolderPath, String reportName) {

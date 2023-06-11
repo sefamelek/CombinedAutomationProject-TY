@@ -7,7 +7,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.testng.annotations.BeforeSuite;
 
-import static com.trendyol.api.constants.Contstants.*;
+import static com.trendyol.api.Constants.Contstants.*;
 
 public class TestBase {
 

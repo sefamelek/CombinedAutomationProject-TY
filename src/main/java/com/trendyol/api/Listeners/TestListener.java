@@ -5,6 +5,7 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -18,13 +19,14 @@ import java.util.Locale;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
-//import static DriverManager.DriverManager.driver;
+import static com.trendyol.ui.Utils.BrowserUtils.getDriver;
 
 public class TestListener implements ITestListener {
     Logger logger;
     private ConcurrentHashMap<String, ExtentTest> allTests = new ConcurrentHashMap<>();
     String reportFolderPath = System.getProperty("user.dir") + "/AutomationReports/";
     String reportName = "AutomationReport.html";
+    WebDriver driver;
 
     //After ending all tests, below method runs.
     @Override
@@ -38,9 +40,6 @@ public class TestListener implements ITestListener {
         allTests.put(iTestResult.getClass().getSimpleName(), extentTest);
         ExtentReportManager.setTest(extentTest);
         extentTest.log(Status.INFO, MarkupHelper.createLabel("Test started: " + iTestResult.getMethod().getMethodName(), ExtentColor.BLUE));
-       // TakesScreenshot screenshotDriver = (TakesScreenshot) driver;
-        //String base64Screenshot = screenshotDriver.getScreenshotAs(OutputType.BASE64);
-        //ExtentReportManager.getTest().get().addScreenCaptureFromBase64String(base64Screenshot,"Sefa2");
         ExtentReportManager.getInstance().flush();
     }
 
@@ -48,9 +47,6 @@ public class TestListener implements ITestListener {
     public void onTestSuccess(ITestResult iTestResult) {
         ExtentReportManager.getTest().get().assignCategory(iTestResult.getClass().getSimpleName());
         ExtentReportManager.getTest().get().createNode(MarkupHelper.createLabel("Test passed", ExtentColor.GREEN).getMarkup());
-       // TakesScreenshot screenshotDriver = (TakesScreenshot) driver;
-        //String base64Screenshot = screenshotDriver.getScreenshotAs(OutputType.BASE64);
-        //ExtentReportManager.getTest().get().addScreenCaptureFromBase64String(base64Screenshot,"Sefa1");
         ExtentReportManager.getInstance().flush();
     }
 
@@ -59,9 +55,6 @@ public class TestListener implements ITestListener {
         try {
             ExtentReportManager.getTest().get().createNode(MarkupHelper.createLabel("Test Failed", ExtentColor.RED).getMarkup())
                     .fail(iTestResult.getThrowable());
-           // TakesScreenshot screenshotDriver = (TakesScreenshot) driver;
-            //String base64Screenshot = screenshotDriver.getScreenshotAs(OutputType.BASE64);
-            //ExtentReportManager.getTest().get().addScreenCaptureFromBase64String(base64Screenshot,"Sefa2");
             ExtentReportManager.getInstance().flush();
         } catch (Exception e) {
             e.printStackTrace();
