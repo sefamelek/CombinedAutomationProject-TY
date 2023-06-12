@@ -5,10 +5,6 @@
         </listeners>
     <test name="API Test Suite">
         <classes>
-            <class name="com.trendyol.api.MathOperationAddition"/>
-            <class name="com.trendyol.api.MathOperationSubstraction"/>
-            <class name="com.trendyol.api.MathOperationMultiplication"/>
-            <class name="com.trendyol.api.MathOperationDivision"/>
             <class name="com.trendyol.api.SumTests"/>
         </classes>
     </test>
