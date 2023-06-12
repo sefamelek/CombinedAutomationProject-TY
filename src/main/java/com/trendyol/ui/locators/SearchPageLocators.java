@@ -14,9 +14,14 @@ public interface SearchPageLocators {
     By ADD_TO_FAVORITES_BUTTON = By.xpath("(//div[@class='fvrt-btn-wrppr'])[index]");//DONE
     By ADDED_TO_FAVORITES_SUCCESS_MESSAGE = By.xpath("(//i[@class='fvrt-btn fvred'])[1]");//DONE
     By PRODUCT_FOR_INDEX_ALTERNATIVE = By.xpath("(//div[@class='product-image-wrapper '])[index]");//DONE
+    By PRODUCT_FOR_INDEX_ALTERNATIVE_GET_TEXT = By.xpath("(//div[@class='seller__store__name'])[index]");//DONE
+
+
     By PRODUCT_FOR_INDEX = By.xpath("//div[contains(@class, 'p-card-wrppr')][index]");//DONE
+    By PRODUCT_FOR_INDEX_GET_TEXT = By.xpath("(//span[@class='prdct-desc-cntnr-name hasRatings'])[index]");//DONE
 
 
+    By COUPON_CLOSE = By.cssSelector(".coupon-modal-container .close-button");//DONE
     By POP_UP = By.cssSelector(".overlay");//DONE
 
 

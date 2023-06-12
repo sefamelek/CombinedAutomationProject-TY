@@ -17,7 +17,7 @@ public class Scenario3 extends BaseUITest{
     SearchPage searchPage = new SearchPage(driver);
 
     @Test
-    public void MonsterSearch() throws IOException, InterruptedException, IOException {
+    public void TabsCheck() throws IOException, InterruptedException, IOException {
         loginPage.Succesfulllogin(username, password);
         homePage.checkProductImagesInTabs(1,8,1,4);
 

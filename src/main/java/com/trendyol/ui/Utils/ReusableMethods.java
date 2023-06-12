@@ -30,7 +30,7 @@ import static java.lang.Math.abs;
 
         public static void click(By locator){
             WebElement element = driver.findElement(locator);
-            waitUntilElementIsClickable(locator,20);
+            waitUntilElementIsClickable(locator,5);
             element.click();
         }
 

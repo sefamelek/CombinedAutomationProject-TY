@@ -46,17 +46,20 @@ public class SearchPage extends BasePage {
         newLocators = newLocators.replace("By.xpath: ", "");
         newLocators = newLocators.replace("[index]", "["+productIndex+"]");
         By newLocator = By.xpath(newLocators);
-        reusableMethods.hover(newLocator);
+
         try {
-            // ...
+            reusableMethods.click(SearchPageLocators.COUPON_CLOSE);
+        } catch (Exception e) {
+            reusableMethods.click(newLocator);
+        }
+
+        try {
             reusableMethods.click(newLocator);
 
         } catch (Exception e) {
             reusableMethods.click(SearchPageLocators.POP_UP);
             Thread.sleep(2000);
             reusableMethods.click(newLocator);
-
-            e.printStackTrace();
         }
         Assert.assertTrue(reusableMethods.isDisplayed(SearchPageLocators.ADDED_TO_FAVORITES_SUCCESS_MESSAGE));
     }
@@ -72,33 +75,41 @@ public class SearchPage extends BasePage {
             newLocatorAlt = newLocatorAlt.replace("By.xpath: ", "");
             newLocatorAlt = newLocatorAlt.replace("[index]", "["+i+"]");
             By newProductLocatorAlt = By.xpath(newLocatorAlt);
+            String newLocatorGet = SearchPageLocators.PRODUCT_FOR_INDEX_GET_TEXT.toString();
+            newLocatorGet = newLocatorGet.replace("By.xpath: ", "");
+            newLocatorGet = newLocatorGet.replace("[index]", "["+i+"]");
+            By newProductLocatorGet = By.xpath(newLocatorGet);
+            String newLocatorAltGets = SearchPageLocators.PRODUCT_FOR_INDEX_ALTERNATIVE_GET_TEXT.toString();
+            newLocatorAltGets = newLocatorAltGets.replace("By.xpath: ", "");
+            newLocatorAltGets = newLocatorAltGets.replace("[index]", "["+i+"]");
+            By newProductLocatorAltGet = By.xpath(newLocatorAltGets);
             boolean isImageDisplayed=false;
             try {
-                productName = reusableMethods.getTextOfElement(newProductLocator);
+                productName = reusableMethods.getTextOfElement(newProductLocatorGet);
                 reusableMethods.scrollIntoView(newProductLocator);
-                isImageDisplayed = reusableMethods.waitUntilElementIsVisible(newProductLocator,1);
+                isImageDisplayed = reusableMethods.isDisplayed(newProductLocator);
 
             } catch (Exception e) {
                 try {
-                    productName = reusableMethods.getTextOfElement(newProductLocatorAlt);
+                    productName = reusableMethods.getTextOfElement(newProductLocatorAltGet);
                     reusableMethods.scrollIntoView(newProductLocatorAlt);
-                    isImageDisplayed = reusableMethods.waitUntilElementIsVisible(newProductLocatorAlt,1);
+                    isImageDisplayed = reusableMethods.isDisplayed(newProductLocatorAlt);
 
                     // ...
                 } catch (Exception exception) {
                     reusableMethods.click(SearchPageLocators.POP_UP);
                     Thread.sleep(1000);
                     try {
-                        productName = reusableMethods.getTextOfElement(newProductLocator);
+                        productName = reusableMethods.getTextOfElement(newProductLocatorGet);
                         reusableMethods.scrollIntoView(newProductLocator);
-                        isImageDisplayed = reusableMethods.waitUntilElementIsVisible(newProductLocator,1);
+                        isImageDisplayed = reusableMethods.isDisplayed(newProductLocator);
 
 
                         // ...
                     } catch (Exception exceptions) {
-                        productName = reusableMethods.getTextOfElement(newProductLocatorAlt);
+                        productName = reusableMethods.getTextOfElement(newProductLocatorAltGet);
                         reusableMethods.scrollIntoView(newProductLocatorAlt);
-                        isImageDisplayed = reusableMethods.waitUntilElementIsVisible(newProductLocatorAlt,1);
+                        isImageDisplayed = reusableMethods.isDisplayed(newProductLocatorAlt);
 
                     }
                     }
