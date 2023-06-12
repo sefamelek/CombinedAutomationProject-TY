@@ -12,10 +12,12 @@ public interface SearchPageLocators {
     By MAX_PRICE_INPUT = By.cssSelector(".fltr-srch-prc-rng-input.max");//DONE
     By PRICE_FILTER_APPLY_BUTTON = By.cssSelector(".fltr-srch-prc-rng-srch");//DONE
     By ADD_TO_FAVORITES_BUTTON = By.xpath("(//div[@class='fvrt-btn-wrppr'])[index]");//DONE
-    By ADDED_TO_FAVORITES_SUCCESS_MESSAGE = By.cssSelector(".with-campaign-view:nth-child(2) .fvrt-btn.fvred");//DONE
-    By PRODUCT_FOR_INDEX = By.xpath("(//div[@class='product-down'])[index]");//DONE
-    By POP_UP = By.cssSelector(".overlay");//DONE
+    By ADDED_TO_FAVORITES_SUCCESS_MESSAGE = By.xpath("(//i[@class='fvrt-btn fvred'])[1]");//DONE
+    By PRODUCT_FOR_INDEX_ALTERNATIVE = By.xpath("(//div[@class='product-image-wrapper '])[index]");//DONE
+    By PRODUCT_FOR_INDEX = By.xpath("//div[contains(@class, 'p-card-wrppr')][index]");//DONE
 
+
+    By POP_UP = By.cssSelector(".overlay");//DONE
 
 
 }

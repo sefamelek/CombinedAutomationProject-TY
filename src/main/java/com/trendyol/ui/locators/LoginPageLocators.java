@@ -14,15 +14,16 @@ public interface LoginPageLocators {
     By INVALID_PASSWORD_ERROR_MESSAGE = By.cssSelector("div#error-box-wrapper");//DONE
     By EMPTY_EMAIL_ERROR_MESSAGE = By.cssSelector("div#error-box-wrapper");//DONE
     By EMPTY_PASSWORD_ERROR_MESSAGE = By.cssSelector("div#error-box-wrapper");//DONE
-    By INVALID_CREDENTIALS_ERROR_MESSAGE = By.id("price-filter");
+    By INVALID_CREDENTIALS_ERROR_MESSAGE = By.cssSelector("div#error-box-wrapper");
     By SIGN_UP_PAGE_BUTTON = By.cssSelector(".signup-button");
     By REGISTER_EMAIL = By.id("register-email");
     By REGISTER_PASSWORD = By.id("register-password-input");
     By GENDER_FEMALE = By.cssSelector(".q-gray.female");
     By GENDER_MALE = By.cssSelector(".q-gray.female");
-    By PERSONAL_CHECKBOX = By.cssSelector(".personal-checkbox .ty-checkbox.ty-checkbox");
-    By MARKETING_CHECKBOX = By.cssSelector(".marketing-checkbox .ty-checkbox.ty-checkbox");
+    By REGISTER_PERSONAL_DATA_CHECKBOX = By.cssSelector(".personal-checkbox .ty-checkbox.ty-checkbox");
+    By REGISTER_MARKETING_CHECKBOX = By.cssSelector(".marketing-checkbox .ty-checkbox.ty-checkbox");
     By RECAPTCHA_CHECKBOX = By.cssSelector(".recaptcha-checkbox-border");
+
     By REGISTER_BUTTON = By.cssSelector("button.submit");//DONE
 
     By WEAK_PASSWORD_ERROR_MESSAGE = By.cssSelector("span.weak");//Zayıf Şifre

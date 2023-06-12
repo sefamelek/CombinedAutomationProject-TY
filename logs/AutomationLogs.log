@@ -8,3 +8,174 @@
 2023-06-09 19:06:00 INFO  Automation:47 - User = sefa
 2023-06-09 19:06:00 INFO  Automation:30 - The substration operation is performed
 2023-06-09 19:06:25 INFO  Automation:30 - The substration operation is performed
+2023-06-11 19:49:24 INFO  Automation:27 - The addition operation is performed
+2023-06-11 19:49:27 INFO  Automation:46 - Result = 12
+2023-06-11 19:49:27 INFO  Automation:47 - User = sefa
+2023-06-11 19:49:27 INFO  Automation:36 - The division operation is performed
+2023-06-11 19:50:02 INFO  Automation:27 - The addition operation is performed
+2023-06-11 19:50:04 INFO  Automation:46 - Result = 12
+2023-06-11 19:50:04 INFO  Automation:47 - User = sefa
+2023-06-11 19:50:04 INFO  Automation:36 - The division operation is performed
+2023-06-11 19:50:05 INFO  Automation:46 - Result = 4
+2023-06-11 19:50:05 INFO  Automation:47 - User = sefa
+2023-06-11 19:50:05 INFO  Automation:33 - The multiplication operation is performed
+2023-06-11 19:50:28 INFO  Automation:27 - The addition operation is performed
+2023-06-11 19:50:31 INFO  Automation:46 - Result = 12
+2023-06-11 19:50:31 INFO  Automation:47 - User = sefa
+2023-06-11 19:50:31 INFO  Automation:36 - The division operation is performed
+2023-06-11 19:50:31 INFO  Automation:46 - Result = 4
+2023-06-11 19:50:31 INFO  Automation:47 - User = sefa
+2023-06-11 19:50:31 INFO  Automation:33 - The multiplication operation is performed
+2023-06-11 19:50:32 INFO  Automation:46 - Result = 120
+2023-06-11 19:50:32 INFO  Automation:47 - User = sefa
+2023-06-11 19:50:32 INFO  Automation:30 - The substration operation is performed
+2023-06-11 19:50:32 INFO  Automation:46 - Result = 2
+2023-06-11 19:50:32 INFO  Automation:47 - User = sefa
+2023-06-11 19:51:11 INFO  Automation:53 - The sum operation is performed
+2023-06-11 19:51:34 INFO  Automation:53 - The sum operation is performed
+2023-06-11 19:51:36 INFO  Automation:63 - Result = 15
+2023-06-11 19:51:36 INFO  Automation:64 - User = sefa
+2023-06-12 03:54:45 INFO  SearchPage:106 - Product: , Image Displayed: false
+2023-06-12 03:54:55 INFO  SearchPage:106 - Product: , Image Displayed: false
+2023-06-12 03:55:06 INFO  SearchPage:106 - Product: , Image Displayed: false
+2023-06-12 03:55:16 INFO  SearchPage:106 - Product: , Image Displayed: false
+2023-06-12 03:58:01 INFO  SearchPage:106 - Product: , Image Displayed: false
+2023-06-12 03:58:11 INFO  SearchPage:106 - Product: , Image Displayed: false
+2023-06-12 03:58:21 INFO  SearchPage:106 - Product: , Image Displayed: false
+2023-06-12 03:58:31 INFO  SearchPage:106 - Product: , Image Displayed: false
+2023-06-12 03:58:32 INFO  SearchPage:48 - Tab 1, Checked 
+2023-06-12 03:58:36 INFO  SearchPage:106 - Product: HIZLI TESLIMAT
+KARGO BEDAVA
+8
+FARKLI RENK SEÇENEKLERİ
+YENİ
+Bu simge, ilgili ürünün farklı seçenekleri de
+olduğunu gösterir. Ürünün detayında renk seçimi yapabilirsiniz.
+AvvaErkek Beyaz Kolay Ütülenebilir Standart Fit Normal Kesim Oxford Gömlek E002000
+(10577)
+Son 14 Günün En Düşük Fiyatı!
+249,99 TL
+Çok Al Az Öde
+Videolu Ürün, Image Displayed: false
+2023-06-12 03:58:36 INFO  SearchPage:106 - Product: HIZLI TESLIMAT
+KARGO BEDAVA
+18
+outfiit manDokulu Oversize Gömlek Siyah 70171002
+(2822)
+170,74 TL, Image Displayed: false
+2023-06-12 03:58:36 INFO  SearchPage:106 - Product: BUGÜN KARGODA
+KARGO BEDAVA
+7
+FitmensBej Klasik Uzun Kol Keten Cotton Hediye Kutulu Erkek Gömlek - Bej
+(65)
+399 TL
+20 TL Kupon
+Çok Al Az Öde, Image Displayed: false
+2023-06-12 03:58:36 INFO  SearchPage:106 - Product: BUGÜN KARGODA
+KARGO BEDAVA
+bombeSlim Fit Erkek Kot Gömlek Yeşil
+(4471)
+Son 30 Günün En Düşük Fiyatı!
+278,10 TL
+269,90 TL
+Çok Al Az Öde, Image Displayed: false
+2023-06-12 03:58:37 INFO  SearchPage:48 - Tab 2, Checked 
+2023-06-12 03:58:43 INFO  SearchPage:106 - Product: BUGÜN KARGODA
+KARGO BEDAVA
+7
+CACALAÇocuk Turkuaz Peştemal Çantaya Dönüştürülebilen 3'ü1 Arada Banyo Havlusu %100 Pamuk 100x180
+464,99 TL
+Çok Al Az Öde, Image Displayed: false
+2023-06-12 03:58:43 INFO  SearchPage:106 - Product: BUGÜN KARGODA
+KARGO BEDAVA
+NabaijiÇocuk Deniz Gözlüğü Mavi
+(626)
+Son 30 Günün En Düşük Fiyatı!
+169,95 TL
+163,95 TL
+10 TL Kupon
+Çok Al Az Öde, Image Displayed: false
+2023-06-12 03:58:43 INFO  SearchPage:106 - Product: BUGÜN KARGODA
+KARGO BEDAVA
+NabaijiDeniz Gözlüğü
+(616)
+Son 7 Günün En Düşük Fiyatı!
+159,90 TL
+154 TL, Image Displayed: false
+2023-06-12 03:58:44 INFO  SearchPage:106 - Product: BUGÜN KARGODA
+KARGO BEDAVA
+NabaijiMavi Turuncu Çocuk Yüzücü Gözlüğü S Boy Şeffaf Camlar Xbase Dye Nabaıjı
+(580)
+200 TL'ye %2 İndirim
+223,70 TL, Image Displayed: false
+2023-06-12 03:58:44 INFO  SearchPage:48 - Tab 3, Checked 
+2023-06-12 03:58:57 INFO  SearchPage:106 - Product: , Image Displayed: false
+2023-06-12 03:59:07 INFO  SearchPage:106 - Product: , Image Displayed: false
+2023-06-12 03:59:17 INFO  SearchPage:106 - Product: , Image Displayed: false
+2023-06-12 03:59:27 INFO  SearchPage:106 - Product: , Image Displayed: false
+2023-06-12 03:59:28 INFO  SearchPage:48 - Tab 4, Checked 
+2023-06-12 03:59:32 INFO  SearchPage:106 - Product: HIZLI TESLIMAT
+KARGO BEDAVA
+Zühre AnaKids Çocuklar Için Özel - Arı Sütü, Pekmez, Bal Ve Vitamin Katkılı Kakaolu Macun
+(43555)
+164,90 TL
+Sepete Ekle
+Sepete Eklendi, Image Displayed: false
+2023-06-12 03:59:32 INFO  SearchPage:106 - Product: HIZLI TESLIMAT
+KARGO BEDAVA
+Zühre AnaKozalak Macunu - Çam Kozalağı Macunu Hologramlı Ürün
+(32816)
+149 TL
+Sepete Ekle
+Sepete Eklendi, Image Displayed: false
+2023-06-12 03:59:32 INFO  SearchPage:106 - Product: KARGO BEDAVA
+Kahve DünyasıLavi Çikolata 1 Kg Bayram Hediyesi
+(24316)
+Son 7 Günün En Düşük Fiyatı!
+195 TL
+Çok Al Az Öde
+Sepete Ekle
+Sepete Eklendi, Image Displayed: false
+2023-06-12 03:59:33 INFO  SearchPage:106 - Product: KARGO BEDAVA
+ZüberFıstık Ezmesi 3 Adet X 315 gr
+(21157)
+Son 14 Günün En Düşük Fiyatı!
+156 TL
+Sepete Ekle
+Sepete Eklendi, Image Displayed: false
+2023-06-12 03:59:33 INFO  SearchPage:48 - Tab 5, Checked 
+2023-06-12 03:59:47 INFO  SearchPage:106 - Product: , Image Displayed: false
+2023-06-12 03:59:57 INFO  SearchPage:106 - Product: , Image Displayed: false
+2023-06-12 04:00:07 INFO  SearchPage:106 - Product: , Image Displayed: false
+2023-06-12 04:00:17 INFO  SearchPage:106 - Product: , Image Displayed: false
+2023-06-12 04:00:18 INFO  SearchPage:48 - Tab 6, Checked 
+2023-06-12 04:00:31 INFO  SearchPage:106 - Product: , Image Displayed: false
+2023-06-12 04:00:41 INFO  SearchPage:106 - Product: , Image Displayed: false
+2023-06-12 04:00:51 INFO  SearchPage:106 - Product: , Image Displayed: false
+2023-06-12 04:01:01 INFO  SearchPage:106 - Product: , Image Displayed: false
+2023-06-12 04:01:02 INFO  SearchPage:48 - Tab 7, Checked 
+2023-06-12 04:01:05 INFO  SearchPage:106 - Product: HIZLI TESLIMAT
+KARGO BEDAVA
+SMARTBLUEPlastik Kasa Amatör Eski Model Manessa Profesyonel T-bıçak Saç Sakal Ense Ve Çizim Tıraş Makinesi
+(2174)
+149 TL
+10 TL Kupon, Image Displayed: false
+2023-06-12 04:01:05 INFO  SearchPage:106 - Product: HIZLI TESLIMAT
+KARGO BEDAVA
+PhilipsAirfryer Xxl Hd9650/90 Avance Collection Fritöz
+(13138)
+Son 30 Günün En Düşük Fiyatı!
+6.190 TL
+5.823 TL, Image Displayed: false
+2023-06-12 04:01:05 INFO  SearchPage:106 - Product: HIZLI TESLIMAT
+KARGO BEDAVA
+PowertecTr-1818 T-bıçak Ense Sakal Çizim Tıraş Makinesi
+(18556)
+334,50 TL
+Çok Al Az Öde, Image Displayed: false
+2023-06-12 04:01:05 INFO  SearchPage:106 - Product: KARGO BEDAVA
+2
+XiaomiMi Smart Air Fryer 3,5 L Fritöz
+(5316)
+2.399 TL, Image Displayed: false
+2023-06-12 04:01:06 INFO  SearchPage:48 - Tab 8, Checked 

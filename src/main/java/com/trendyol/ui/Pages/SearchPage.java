@@ -1,15 +1,20 @@
 package com.trendyol.ui.Pages;
 
+import org.apache.log4j.BasicConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import com.trendyol.ui.locators.*;
-import org.testng.log4testng.Logger;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 
 import java.io.IOException;
 
 public class SearchPage extends BasePage {
     private static final Logger logger = Logger.getLogger(SearchPage.class);
+    static {
+        BasicConfigurator.configure();
+    }
 
     public SearchPage(WebDriver driver) {
         super(driver);
@@ -62,11 +67,45 @@ public class SearchPage extends BasePage {
             newLocator = newLocator.replace("By.xpath: ", "");
             newLocator = newLocator.replace("[index]", "["+i+"]");
             By newProductLocator = By.xpath(newLocator);
-            reusableMethods.click(newProductLocator);
-            reusableMethods.waitUntilElementIsVisible(newProductLocator,10);
-            String productName = reusableMethods.getTextOfElement(newProductLocator);
-            boolean isImageDisplayed = reusableMethods.waitUntilElementIsVisible(newProductLocator,10);
+            String productName;
+            String newLocatorAlt = SearchPageLocators.PRODUCT_FOR_INDEX_ALTERNATIVE.toString();
+            newLocatorAlt = newLocatorAlt.replace("By.xpath: ", "");
+            newLocatorAlt = newLocatorAlt.replace("[index]", "["+i+"]");
+            By newProductLocatorAlt = By.xpath(newLocatorAlt);
+            boolean isImageDisplayed=false;
+            try {
+                productName = reusableMethods.getTextOfElement(newProductLocator);
+                reusableMethods.scrollIntoView(newProductLocator);
+                isImageDisplayed = reusableMethods.waitUntilElementIsVisible(newProductLocator,1);
+
+            } catch (Exception e) {
+                try {
+                    productName = reusableMethods.getTextOfElement(newProductLocatorAlt);
+                    reusableMethods.scrollIntoView(newProductLocatorAlt);
+                    isImageDisplayed = reusableMethods.waitUntilElementIsVisible(newProductLocatorAlt,1);
+
+                    // ...
+                } catch (Exception exception) {
+                    reusableMethods.click(SearchPageLocators.POP_UP);
+                    Thread.sleep(1000);
+                    try {
+                        productName = reusableMethods.getTextOfElement(newProductLocator);
+                        reusableMethods.scrollIntoView(newProductLocator);
+                        isImageDisplayed = reusableMethods.waitUntilElementIsVisible(newProductLocator,1);
+
+
+                        // ...
+                    } catch (Exception exceptions) {
+                        productName = reusableMethods.getTextOfElement(newProductLocatorAlt);
+                        reusableMethods.scrollIntoView(newProductLocatorAlt);
+                        isImageDisplayed = reusableMethods.waitUntilElementIsVisible(newProductLocatorAlt,1);
+
+                    }
+                    }
+                }
             logger.info("Product: " + productName + ", Image Displayed: " + isImageDisplayed);
+
+            System.out.println("Product: " + productName + ", Image Displayed: " + isImageDisplayed);
 
         }
     }

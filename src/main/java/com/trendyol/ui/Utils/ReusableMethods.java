@@ -102,10 +102,10 @@ import static java.lang.Math.abs;
             js.executeScript("window.scrollBy(0, " + abs(pixels) + ");", "");
         }
 
-        public void scrollIntoView(WebElement element) {
-
+        public void scrollIntoView(By locator) {
+            WebElement element = driver.findElement(locator);
             JavascriptExecutor js = (JavascriptExecutor)driver;
-            js.executeScript("arguments[0].scrollIntoView(false);", element);
+            js.executeScript("arguments[0].scrollIntoView(true);", element);
         }
 
 

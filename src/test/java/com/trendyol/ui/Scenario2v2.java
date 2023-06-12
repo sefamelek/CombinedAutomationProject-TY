@@ -20,9 +20,10 @@ public class Scenario2v2 extends BaseUITest {
         public void GomlekSearch() throws IOException, InterruptedException, IOException {
                 loginPage.Succesfulllogin(username, password);
                 homePage.searchProduct("Gömlek");
-                searchPage.addProductToFavorites(2);
+                searchPage.addProductToFavorites(1);
                 favoritesPage.addFavoriteProductToBasket(1);
                 basketPage.checkProductTıtle();
+                favoritesPage.deleteProducts();
                 basketPage.deleteProducts();
         }
 

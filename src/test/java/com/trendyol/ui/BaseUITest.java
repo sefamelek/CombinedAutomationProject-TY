@@ -8,6 +8,11 @@ import com.trendyol.api.Utils.ExtentReportManager;
 import com.trendyol.ui.Pages.*;
 import com.trendyol.ui.Utils.BrowserUtils;
 import com.trendyol.ui.Utils.ReusableMethods;
+import com.trendyol.ui.locators.BasketPageLocators;
+import com.trendyol.ui.locators.FavoritesPageLocators;
+import com.trendyol.ui.locators.HomePageLocators;
+import com.trendyol.ui.locators.SearchPageLocators;
+import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -23,9 +28,11 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
+import static com.trendyol.ui.Pages.BasePage.reusableMethods;
+
 
 public class BaseUITest {
-        protected WebDriver driver;
+    protected WebDriver driver;
     ExtentReports extent = ExtentReportManager.getInstance();
     public static Logger logger;
 
@@ -46,19 +53,24 @@ public class BaseUITest {
         ReusableMethods.setDriver(driver);
         ReusableMethods.screenShot("Trendyol Main Page");
 
+        logger= Logger.getLogger("Automation");//added Logger
+        logger.setLevel(Level.DEBUG);
+    }
+
+    @AfterMethod
+    public void afterMethod(ITestResult result) {
+
+        driver.quit();
 
 
     }
-        @AfterMethod
-        public void afterMethod(ITestResult result) {
 
-        //driver.quit();
-        }
+    @AfterSuite
+    public void tearDown() {
 
-        @AfterSuite
-        public void tearDown() {
-            extent.flush();
-        }
+        extent.flush();
+
+    }
     }
 
 

@@ -17,6 +17,20 @@ public class BasketPage extends BasePage{
     }
 
     public void deleteProducts() throws IOException, InterruptedException {
-        reusableMethods.isClickable(BasketPageLocators.BASKET_PRODUCT_DELETE);
+        try {
+            // ...
+            reusableMethods.click(HomePageLocators.BASKET_BUTTON);
+
+        } catch (Exception e) {
+            reusableMethods.click(BasketPageLocators.POP_UP_BASKET);
+            Thread.sleep(2000);
+            reusableMethods.click(HomePageLocators.BASKET_BUTTON);
+
+            e.printStackTrace();
+        }
+        Thread.sleep(1000);
+        reusableMethods.click(BasketPageLocators.BASKET_PRODUCT_DELETE);
+        Thread.sleep(1000);
+
     }
 }

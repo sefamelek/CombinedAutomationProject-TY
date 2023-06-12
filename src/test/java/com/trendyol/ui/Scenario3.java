@@ -6,8 +6,8 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 public class Scenario3 extends BaseUITest{
-    private String username = "testuser";
-    private String password = "testpassword";
+    private String username = "trendyolotomasyontest@test.com";
+    private String password = "trendyoltest123";
     LoginPage loginPage = new LoginPage(driver);
     BasePage basePage = new BasePage(driver);
     BasketPage basketPage = new BasketPage(driver);
@@ -18,7 +18,7 @@ public class Scenario3 extends BaseUITest{
 
     @Test
     public void MonsterSearch() throws IOException, InterruptedException, IOException {
-        loginPage.Succesfulllogin("test@example.com", "password123");
+        loginPage.Succesfulllogin(username, password);
         homePage.checkProductImagesInTabs(1,8,1,4);
 
     }

@@ -16,8 +16,8 @@ public interface HomePageLocators {
     By FAVORITES_MENU_BUTTON = By.cssSelector(".account-favorites");
 
     By SEARCH_BUTTON = By.cssSelector(".cyrzo7gC");
-    By GET_COMPONENT_LOCATOR = By.xpath("(//article[contains(@class, 'component-item')]//div[contains(@class, 'image-container')])[1]");
-    By GET_TAB_LOCATOR = By.cssSelector(".tab-link:nth-child(1)");
+    By GET_COMPONENT_LOCATOR = By.xpath("(//article[contains(@class, 'component-item')]//a[contains(@class, 'widget')])[1]");
+    By GET_TAB_LOCATOR = By.cssSelector(".tab-link:nth-child(index)");
 
 
 

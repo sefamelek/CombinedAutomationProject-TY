@@ -25,4 +25,18 @@ public class FavoritesPage extends BasePage{
         Assert.assertTrue(reusableMethods.isDisplayed(ProductPageLocators.ADDED_TO_BASKET_SUCCESS_MESSAGE_IN_FAVORITES));
 
     }
+    public void deleteProducts() throws IOException, InterruptedException {
+        try {
+            // ...
+            reusableMethods.click(HomePageLocators.FAVORITES_MENU_BUTTON);
+
+        } catch (Exception e) {
+            reusableMethods.click(BasketPageLocators.POP_UP_BASKET);
+            Thread.sleep(2000);
+            reusableMethods.click(HomePageLocators.FAVORITES_MENU_BUTTON);
+
+            e.printStackTrace();
+        }
+        reusableMethods.click(FavoritesPageLocators.FAVORITES_PRODUCT_DELETE);
+    }
 }
