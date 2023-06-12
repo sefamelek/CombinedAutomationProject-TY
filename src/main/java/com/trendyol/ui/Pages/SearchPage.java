@@ -50,7 +50,6 @@ public class SearchPage extends BasePage {
         try {
             reusableMethods.click(SearchPageLocators.COUPON_CLOSE);
         } catch (Exception e) {
-            reusableMethods.click(newLocator);
         }
 
         try {

@@ -271,9 +271,21 @@ import static java.lang.Math.abs;
 
         }
         public void notifDismiss() {
+
             driver.switchTo().alert().dismiss();
             driver.switchTo().alert().accept();
             driver.switchTo().defaultContent();
+        }
+        public void CaptchaSwitchFrame(By locator) throws InterruptedException {
+            WebElement iFrame = driver.findElement(By.xpath("//iframe[@title='reCAPTCHA']"));
+            driver.switchTo().frame(iFrame);
+            WebElement iFrame_checkbox = driver.findElement(locator);
+            iFrame_checkbox.click();
+            driver.switchTo().defaultContent();
+            Thread.sleep(1000);
+
+
+            //driver.switchTo().frame(iFrame);            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//iframe[starts-with(@name, 'a-') and starts-with(@src, 'https://www.google.com/recaptcha')]")));
         }
 
     }

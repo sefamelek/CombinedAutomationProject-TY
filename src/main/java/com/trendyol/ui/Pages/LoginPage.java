@@ -100,13 +100,12 @@ public class LoginPage extends BasePage {
         ReusableMethods.screenShot("Trendyol Sign Up Page");
         reusableMethods.sendKeys(LoginPageLocators.REGISTER_EMAIL, email);
         reusableMethods.sendKeys(LoginPageLocators.REGISTER_PASSWORD, password);
-        reusableMethods.click(LoginPageLocators.REGISTER_PERSONAL_DATA_CHECKBOX);
         reusableMethods.click(LoginPageLocators.REGISTER_MARKETING_CHECKBOX);
         reusableMethods.click(LoginPageLocators.REGISTER_PERSONAL_DATA_CHECKBOX);
         reusableMethods.click(LoginPageLocators.GENDER_MALE);
-        reusableMethods.click(LoginPageLocators.RECAPTCHA_CHECKBOX);
+        reusableMethods.CaptchaSwitchFrame(LoginPageLocators.RECAPTCHA_CHECKBOX);
         reusableMethods.click(LoginPageLocators.REGISTER_BUTTON);
-        Assert.assertEquals(reusableMethods.getTextOfElement(HomePageLocators.HOME_PAGE_LOGIN_USER_LOGIN_MENU), "Hesabım");
+        Assert.assertTrue(reusableMethods.isDisplayed(LoginPageLocators.EMAIL_VERIFY_POP_UP));
     }
     public void failedRegistration_InvalidEmail(String email, String password) throws IOException, InterruptedException {
         Assert.assertEquals(reusableMethods.getPageTitle(), HomePageLocators.HOME_PAGE_TITLE);
@@ -116,11 +115,10 @@ public class LoginPage extends BasePage {
         ReusableMethods.screenShot("Trendyol Sign Up Page");
         reusableMethods.sendKeys(LoginPageLocators.REGISTER_EMAIL, email);
         reusableMethods.sendKeys(LoginPageLocators.REGISTER_PASSWORD, password);
-        reusableMethods.click(LoginPageLocators.REGISTER_PERSONAL_DATA_CHECKBOX);
         reusableMethods.click(LoginPageLocators.REGISTER_MARKETING_CHECKBOX);
         reusableMethods.click(LoginPageLocators.REGISTER_PERSONAL_DATA_CHECKBOX);
         reusableMethods.click(LoginPageLocators.GENDER_MALE);
-        reusableMethods.click(LoginPageLocators.RECAPTCHA_CHECKBOX);
+        reusableMethods.CaptchaSwitchFrame(LoginPageLocators.RECAPTCHA_CHECKBOX);
         reusableMethods.click(LoginPageLocators.REGISTER_BUTTON);
         Assert.assertEquals(reusableMethods.getTextOfElement(LoginPageLocators.INVALID_EMAIL_ERROR_MESSAGE), "Lütfen geçerli bir e-posta adresi giriniz.");
     }
@@ -132,13 +130,12 @@ public class LoginPage extends BasePage {
         ReusableMethods.screenShot("Trendyol Sign Up Page");
         reusableMethods.sendKeys(LoginPageLocators.REGISTER_EMAIL, email);
         reusableMethods.sendKeys(LoginPageLocators.REGISTER_PASSWORD, password);
-        reusableMethods.click(LoginPageLocators.REGISTER_PERSONAL_DATA_CHECKBOX);
         reusableMethods.click(LoginPageLocators.REGISTER_MARKETING_CHECKBOX);
         reusableMethods.click(LoginPageLocators.REGISTER_PERSONAL_DATA_CHECKBOX);
         reusableMethods.click(LoginPageLocators.GENDER_MALE);
-        reusableMethods.click(LoginPageLocators.RECAPTCHA_CHECKBOX);
+        reusableMethods.CaptchaSwitchFrame(LoginPageLocators.RECAPTCHA_CHECKBOX);
         reusableMethods.click(LoginPageLocators.REGISTER_BUTTON);
-        Assert.assertEquals(reusableMethods.getTextOfElement(LoginPageLocators.WEAK_PASSWORD_ERROR_MESSAGE), "Zayıf şifre");
+        Assert.assertEquals(reusableMethods.getTextOfElement(LoginPageLocators.WEAK_PASSWORD_ERROR_MESSAGE), "Zayıf Şifre");
     }
     public void failedRegistration_EmptyFields(String email, String password) throws IOException, InterruptedException {
         Assert.assertEquals(reusableMethods.getPageTitle(), HomePageLocators.HOME_PAGE_TITLE);
@@ -150,11 +147,19 @@ public class LoginPage extends BasePage {
         reusableMethods.sendKeys(LoginPageLocators.REGISTER_PASSWORD, password);
         reusableMethods.click(LoginPageLocators.REGISTER_PERSONAL_DATA_CHECKBOX);
         reusableMethods.click(LoginPageLocators.REGISTER_MARKETING_CHECKBOX);
-        reusableMethods.click(LoginPageLocators.REGISTER_PERSONAL_DATA_CHECKBOX);
         reusableMethods.click(LoginPageLocators.GENDER_MALE);
-        reusableMethods.click(LoginPageLocators.RECAPTCHA_CHECKBOX);
+        reusableMethods.CaptchaSwitchFrame(LoginPageLocators.RECAPTCHA_CHECKBOX);
         reusableMethods.click(LoginPageLocators.REGISTER_BUTTON);
-        Assert.assertEquals(reusableMethods.getTextOfElement(LoginPageLocators.EMPTY_FIELDS_ERROR_MESSAGE), "Lütfen boş alanları doldurunuz");
+        if (email=="") {
+            Assert.assertEquals(reusableMethods.getTextOfElement(LoginPageLocators.EMPTY_FIELDS_ERROR_MESSAGE), "E-posta ve şifrenizi giriniz.");
+
+        }
+        else {
+            Assert.assertEquals(reusableMethods.getTextOfElement(LoginPageLocators.EMPTY_FIELDS_ERROR_MESSAGE), "Şifreniz 7 ile 64 karakter arasında olmalıdır.");
+
+        }
+
+
     }
 
 
@@ -168,7 +173,6 @@ public class LoginPage extends BasePage {
         reusableMethods.sendKeys(LoginPageLocators.REGISTER_PASSWORD, password);
         reusableMethods.click(LoginPageLocators.REGISTER_PERSONAL_DATA_CHECKBOX);
         reusableMethods.click(LoginPageLocators.REGISTER_MARKETING_CHECKBOX);
-        reusableMethods.click(LoginPageLocators.REGISTER_PERSONAL_DATA_CHECKBOX);
         reusableMethods.click(LoginPageLocators.GENDER_MALE);
         reusableMethods.click(LoginPageLocators.REGISTER_BUTTON);
         Assert.assertEquals(reusableMethods.getTextOfElement(LoginPageLocators.CAPTCHA_ERROR_MESSAGE),"Üyelik işlemini güvenli hale getirmek için \"Ben robot değilim\" alanına tıklayınız.");

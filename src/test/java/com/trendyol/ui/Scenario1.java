@@ -27,20 +27,16 @@ public class Scenario1 extends BaseUITest {
     @Test
     public void failedLogin_InvalidPassword() throws IOException, InterruptedException {
         String invalidPassword = "invalid_password";
-
         loginPage.failedLogin_InvalidPassword(email, invalidPassword);
-        // Assert error message or validate the expected behavior
     }
 
     @Test
     public void failedLogin_EmptyPassword() throws IOException, InterruptedException {
         loginPage.failedLogin_EmptyFields(email, "");
-        // Assert error message or validate the expected behavior
     }
     @Test
     public void failedLogin_EmptyEmail() throws IOException, InterruptedException {
         loginPage.failedLogin_EmptyFields("", password);
-        // Assert error message or validate the expected behavior
     }
 
     @Test
@@ -48,48 +44,41 @@ public class Scenario1 extends BaseUITest {
         String wrongPassword = "wrong_password";
 
         loginPage.failedLogin_InvalidCredentials(email, wrongPassword);
-        // Assert error message or validate the expected behavior
     }
 
     @Test
     public void failedLogin_ReversedFields() throws IOException, InterruptedException {
         loginPage.failedLogin_ReversedFields(email,password);
-        // Assert error message or validate the expected behavior
     }
+
+
 
     @Test
     public void successfulRegistration() throws IOException, InterruptedException {
 
 
-        loginPage.successfulRegistration(email, password);
-        // Assert successful registration or validate the expected behavior
+        loginPage.successfulRegistration("newusertesttrendyol@gmail.com", password);
     }
 
     @Test
     public void failedRegistration_InvalidEmail() throws IOException, InterruptedException {
-        String invalidEmail = "invalid_email";
-
+        String invalidEmail = "invalid_email@";
         loginPage.failedRegistration_InvalidEmail(invalidEmail, password);
-        // Assert error message or validate the expected behavior
     }
 
     @Test
     public void failedRegistration_WeakPassword() throws IOException, InterruptedException {
         String weakPassword = "weak";
-
         loginPage.failedRegistration_WeakPassword(email, weakPassword);
-        // Assert error message or validate the expected behavior
     }
 
     @Test
     public void registerScenario_EmptyCaptchaVerification() throws IOException, InterruptedException {
-        loginPage.failedRegistration_EmptyFields(email, password);
-        // Assert error message or validate the expected behavior
+        loginPage.registerScenario_EmptyCaptchaVerification("newusertesttrendyol@gmail.com", password);
     }
     @Test
     public void failedRegistration_EmptyFields() throws IOException, InterruptedException {
         loginPage.failedRegistration_EmptyFields("", "");
-        // Assert error message or validate the expected behavior
     }
 
 

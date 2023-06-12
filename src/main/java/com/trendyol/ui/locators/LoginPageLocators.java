@@ -20,15 +20,18 @@ public interface LoginPageLocators {
     By REGISTER_PASSWORD = By.id("register-password-input");
     By GENDER_FEMALE = By.cssSelector(".q-gray.female");
     By GENDER_MALE = By.cssSelector(".q-gray.female");
-    By REGISTER_PERSONAL_DATA_CHECKBOX = By.cssSelector(".personal-checkbox .ty-checkbox.ty-checkbox");
-    By REGISTER_MARKETING_CHECKBOX = By.cssSelector(".marketing-checkbox .ty-checkbox.ty-checkbox");
-    By RECAPTCHA_CHECKBOX = By.cssSelector(".recaptcha-checkbox-border");
+    By REGISTER_PERSONAL_DATA_CHECKBOX = By.cssSelector(".personal-checkbox div.ty-checkbox-container");
+    By REGISTER_MARKETING_CHECKBOX = By.cssSelector(".marketing-checkbox div.ty-checkbox-container");
+    By RECAPTCHA_CHECKBOX = By.cssSelector("#recaptcha-anchor");
 
     By REGISTER_BUTTON = By.cssSelector("button.submit");//DONE
 
     By WEAK_PASSWORD_ERROR_MESSAGE = By.cssSelector("span.weak");//Zayıf Şifre
     By EMPTY_FIELDS_ERROR_MESSAGE = By.cssSelector("div#error-box-wrapper");//E-posta ve şifrenizi giriniz.//Şifreniz 7 ile 64 karakter arasında olmalıdır.//Bu e-posta adresi kullanılamaz. Lütfen başka bir e-posta adresi deneyiniz.
     By CAPTCHA_ERROR_MESSAGE = By.id("captcha-box-error"); //Üyelik işlemini güvenli hale getirmek için "Ben robot değilim" alanına tıklayınız.
+    By EMAIL_VERIFY_POP_UP = By.cssSelector(".email-verify-modal");
+
+
 
 
 
