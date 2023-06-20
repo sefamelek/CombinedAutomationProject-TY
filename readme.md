@@ -73,5 +73,3 @@ As a team, you decided to develop a scenario which controls this.
 - Tabs are clicked one by one 
 - The first components are clicked
 - It is logged the first 4 products and whether the images of these products are received
-
-**PS:** The best practice for UI automation scenarios is using parametric browsers to run the tests and checking whether the pages are loaded when switching between pages 😊 
